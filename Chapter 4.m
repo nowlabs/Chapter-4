@@ -34,7 +34,7 @@ NSString *colorName (ShapeColor colorName) {
 	}
 }
 
-@interface Circle: NSObject
+@interface Shape : NSObject
 {
 	ShapeColor fillColor;
 	ShapeRect bounds;
@@ -44,9 +44,9 @@ NSString *colorName (ShapeColor colorName) {
 - (void) setBounds: (ShapeRect) bounds;
 - (void) draw;
 
-@end // Circle Interface
+@end //Shape Interface
 
-@implementation Circle
+@implementation Shape
 
 - (void) setFillColor: (ShapeColor) c
 {
@@ -57,6 +57,19 @@ NSString *colorName (ShapeColor colorName) {
 {
 	bounds = b;
 }
+
+- (void) draw
+{
+}
+
+@end //Shape
+
+
+@interface Circle: Shape
+
+@end // Circle Interface
+
+@implementation Circle
 
 - (void) draw
 {
@@ -66,29 +79,11 @@ NSString *colorName (ShapeColor colorName) {
 
 @end //Circle
 
-@interface Rectangle: NSObject
-{
-	ShapeColor fillColor;
-	ShapeRect bounds;
-}
-
-- (void) setFillColor: (ShapeColor) fillColor;
-- (void) setBounds: (ShapeRect) bounds;
-- (void) draw;
+@interface Rectangle: Shape
 
 @end // Rectangle Interface
 
 @implementation Rectangle
-
-- (void) setFillColor: (ShapeColor) c
-{
-	fillColor = c;
-}
-
-- (void) setBounds: (ShapeRect) b
-{
-	bounds = b;
-}
 
 - (void) draw
 {
@@ -98,29 +93,11 @@ NSString *colorName (ShapeColor colorName) {
 
 @end //Rectangle
 
-@interface OblateSpheroid: NSObject
-{
-	ShapeColor fillColor;
-	ShapeRect bounds;
-}
-
-- (void) setFillColor: (ShapeColor) fillColor;
-- (void) setBounds: (ShapeRect) bounds;
-- (void) draw;
+@interface OblateSpheroid: Shape
 
 @end // OblateSpheroid Interface
 
 @implementation OblateSpheroid
-
-- (void) setFillColor: (ShapeColor) c
-{
-	fillColor = c;
-}
-
-- (void) setBounds: (ShapeRect) b
-{
-	bounds = b;
-}
 
 - (void) draw
 {
@@ -130,29 +107,11 @@ NSString *colorName (ShapeColor colorName) {
 
 @end //OblateSpheroid
 
-@interface Triangle: NSObject
-{
-	ShapeColor fillColor;
-	ShapeRect bounds;
-}
-
-- (void) setFillColor: (ShapeColor) fillColor;
-- (void) setBounds: (ShapeRect) bounds;
-- (void) draw;
+@interface Triangle: Shape
 
 @end // Triangle Interface
 
 @implementation Triangle
-
-- (void) setFillColor: (ShapeColor) c
-{
-	fillColor = c;
-}
-
-- (void) setBounds: (ShapeRect) b
-{
-	bounds = b;
-}
 
 - (void) draw
 {
