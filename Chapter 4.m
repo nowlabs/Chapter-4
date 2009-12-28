@@ -71,6 +71,14 @@ NSString *colorName (ShapeColor colorName) {
 
 @implementation Circle
 
+- (void) setFillColor:(ShapeColor) c
+{
+	if (c == kRedColor) {
+		c = kGreenColor;
+	}
+	[super setFillColor: c];
+}
+
 - (void) draw
 {
 	NSLog(@"drawing a circle at (%d %d %d %d) in %@", bounds.x, 
